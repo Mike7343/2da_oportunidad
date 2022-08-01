@@ -1,1 +1,32 @@
-<p>transportes works!</p>
+<div class="container">
+  <p>LISTA DE TRANSPORTES</p>
+  <button routerLink="/add" type="button" class="btn btn-success">Agregar</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Transporte</th>
+        <th scope="col">Placas</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let transporte of ListarTransporte">
+        <th>{{transporte.id_transporte}}</th>
+        <td>{{transporte.transporte}}</td>
+        <td>{{transporte.placas}}</td>
+        <td>
+            <button (click)="modificar(transporte.id_transporte)" type="button" class="btn btn-dark">Editar</button>
+        </td>
+        <td>
+            <button (click)="eliminar(transporte.id_transporte)"  type="button"  class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+    <tr>
+     
+    </tr>
+  </table>
+
+</div>
